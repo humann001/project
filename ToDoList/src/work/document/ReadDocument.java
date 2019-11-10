@@ -38,7 +38,7 @@ public class ReadDocument {
         }
     }
 
-    public void addNewTask(String caption, String description, String priority, String deadline) {
+    public void addTask(String caption, String description, String priority, String deadline, String status, String complete) {
 //        System.out.println("Свободный id: " + storage.getFreeId());
         String id = storage.getFreeId();
         Map<String, String>  element = new LinkedHashMap<>();
@@ -46,8 +46,8 @@ public class ReadDocument {
         element.put("Description", description);
         element.put("Priority", priority);
         element.put("Deadline", deadline);
-        element.put("Status", "new");
-        element.put("Complete", "");
+        element.put("Status", status);
+        element.put("Complete", complete);
         storage.getDataStorage().put(id, element);
 
         storage.addData(id);
@@ -63,7 +63,8 @@ public class ReadDocument {
 
     public void remove(String id) {
         if (storage.getListId().contains(id)) {
-            storage.remove(id);
+            storage.removeData(id);
+            System.out.println("Успешное удаление");
         } else {
             System.out.println("Задачи с таким id не существует");
         }

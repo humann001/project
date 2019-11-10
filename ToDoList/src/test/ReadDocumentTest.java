@@ -8,34 +8,37 @@ import static org.junit.Assert.*;
 
 public class ReadDocumentTest {
 
+
+    String nameFile = "todotask1.xml";
+
     @Test
     public void testInputTask() {
-        ReadDocument readDocument = new ReadDocument("todotask.xml");
+        ReadDocument readDocument = new ReadDocument(nameFile);
         readDocument.inputTasks();
     }
 
     @Test
     public void testInputTaskParametrs() {
-        ReadDocument readDocument = new ReadDocument("todotask.xml");
-        readDocument.inputTasks("Status", "done");
+        ReadDocument readDocument = new ReadDocument(nameFile);
+        readDocument.inputTasks("Status", "dfdf");
     }
 
     @Test
-    public void testAddNew() {
-        ReadDocument readDocument = new ReadDocument("todotask.xml");
+    public void testAddTask() {
+        ReadDocument readDocument = new ReadDocument(nameFile);
 //        readDocument.addNewTask("adasd", "sadasd", "sad", "asd");
     }
 
     @Test
     public void testEdit() {
-        ReadDocument readDocument = new ReadDocument("todotask.xml");
+        ReadDocument readDocument = new ReadDocument(nameFile);
         readDocument.edit("7", "asdasd", "sds");
     }
 
     @Test
     public void testRemove() {
-        ReadDocument readDocument = new ReadDocument("todotask.xml");
-        readDocument.remove("3");
+        ReadDocument readDocument = new ReadDocument(nameFile);
+        readDocument.remove("5");
     }
 
 }

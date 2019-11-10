@@ -26,27 +26,21 @@ public class Storage {
 
     private String nameFile;
     private String id;
-
     private String freeId;
-
     private ArrayList<String> listId = new ArrayList<>();
-
     private Map<String, Map<String, String>> dataStorage;
-
     private NodeList tasks;
     private Node root;
     private Document document;
 
     public Storage(String nameFile) {
         this.nameFile = nameFile;
-        dataFilling();
+        dataParsing();
     }
-
 
     public Map<String, Map<String, String>> getDataStorage() {
         return dataStorage;
     }
-
 
     public ArrayList<String> getListId() {
         return listId;
@@ -62,27 +56,20 @@ public class Storage {
         return freeId;
     }
 
-
-    private void dataFilling() {
-
+    private void dataParsing() {
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
             Document document = documentBuilder.parse(nameFile);
-
-
             this.document = document;
 
             Node root = document.getDocumentElement();
-
             this.root = root;
 
             NodeList tasks = root.getChildNodes();
-
             this.tasks = tasks;
 
             Map<String, Map<String, String>> dataStorage = new HashMap<>();
-
 
             for (int i = 0; i < tasks.getLength(); i++) {
 
@@ -117,7 +104,6 @@ public class Storage {
 
             this.dataStorage = dataStorage;
 
-
         } catch (ParserConfigurationException ex) {
             ex.printStackTrace(System.out);
         } catch (SAXException ex) {
@@ -131,7 +117,6 @@ public class Storage {
 
     public void dataReplacement() {
         for (int i = 0; i < tasks.getLength(); i++) {
-
             for (Map.Entry<String, Map<String, String>> entry : dataStorage.entrySet()) {
                 if (tasks.item(i).getNodeType() != Node.TEXT_NODE) {
                     if (entry.getKey().equals(tasks.item(i).getAttributes().getNamedItem("id").getTextContent())) {
@@ -159,11 +144,9 @@ public class Storage {
 
         }
         writeDocument(document);
-
     }
 
     public void addData(String id) {
-
         Element element = document.createElement("Task");
         element.setAttribute("id", id);
 
@@ -176,18 +159,13 @@ public class Storage {
                 element.appendChild(element1);
             }
         }
-
         listId.add(id);
         root.appendChild(element);
-
-
-
         writeDocument(document);
     }
 
 
-    public void remove(String id) {
-
+    public void removeData(String id) {
         for (int i = 0; i < tasks.getLength(); i++) {
             if (tasks.item(i).getNodeType() != Node.TEXT_NODE) {
                 String s = root.getChildNodes().item(i).getAttributes().getNamedItem("id").getNodeValue();
@@ -198,11 +176,8 @@ public class Storage {
                 dataStorage.remove(id);
             }
         }
-
         writeDocument(document);
-
     }
-
 
     private void writeDocument(Document document) throws TransformerFactoryConfigurationError {
         try {
@@ -215,8 +190,5 @@ public class Storage {
             e.printStackTrace(System.out);
         }
     }
-
-
-
 
 }

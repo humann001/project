@@ -138,7 +138,7 @@ public class Process {
             System.out.println("Введите срок: ");
             String s4 = sc.nextLine();
 
-            readDocument.addNewTask(s1, s2, s3, s4);
+            readDocument.addTask(s1, s2, s3, s4, "new", "");
 //                readDocument.addNewTask("sad", "asdasdas", "55", "2019");
 
             commandExists = true;
@@ -205,8 +205,6 @@ public class Process {
             System.out.println("Введите id: ");
             String id = sc.nextLine().toString();
             readDocument.remove(id);
-
-            System.out.println("Успешное удаление");
 
             commandExists = true;
         }
