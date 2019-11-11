@@ -1,6 +1,6 @@
 package com.company;
 
-import work.command.Process;
+import work.commands.Process;
 
 public class Main {
 
@@ -10,6 +10,7 @@ public class Main {
         Process process = new Process("todotask.xml");
 
         process.start();
+
 
     }
 

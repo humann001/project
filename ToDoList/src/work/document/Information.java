@@ -1,6 +1,6 @@
-package work.command;
+package work.document;
 
-public class Help {
+public class Information {
 
     public static void getHelp() {
         System.out.println("Справочник по командам");

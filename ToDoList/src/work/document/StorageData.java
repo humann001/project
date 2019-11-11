@@ -15,6 +15,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,20 +23,33 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Storage {
+public class StorageData {
 
     private String nameFile;
-    private String id;
     private String freeId;
     private ArrayList<String> listId = new ArrayList<>();
-    private Map<String, Map<String, String>> dataStorage;
+    private Map<String, Map<String, String>> dataStorage = new HashMap<>();
     private NodeList tasks;
     private Node root;
     private Document document;
+    private boolean fileExists = false;
 
-    public Storage(String nameFile) {
+
+    public StorageData(String nameFile) {
         this.nameFile = nameFile;
-        dataParsing();
+
+        File file = new File(nameFile);
+        if (file.exists()) {
+            dataParsing();
+            fileExists = true;
+        } else {
+            System.out.println("Файл не существует");
+            fileExists = false;
+        }
+    }
+
+    public boolean isFileExists() {
+        return fileExists;
     }
 
     public Map<String, Map<String, String>> getDataStorage() {
@@ -58,6 +72,7 @@ public class Storage {
 
     private void dataParsing() {
         try {
+
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
             Document document = documentBuilder.parse(nameFile);
@@ -138,7 +153,6 @@ public class Storage {
                             }
                         }
                     }
-//                    root.appendChild(tasks.item(i));
                 }
             }
 
