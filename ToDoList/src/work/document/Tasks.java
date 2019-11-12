@@ -14,12 +14,10 @@ public class Tasks {
         if (storageData.isFileExists()) {
             for (Map.Entry<String, Map<String, String>> entry : storageData.getDataStorage().entrySet()) {
                 if (value.equals(entry.getValue().get(nameParametr))) {
-
                     for (Map.Entry<String, String> entry1 : entry.getValue().entrySet()) {
                         if (!entry1.getValue().isEmpty())
-                            System.out.println(changeText(entry1.getKey()) + ", " + entry1.getValue());
+                            System.out.println(changeText(entry1.getKey()) + ": " + entry1.getValue());
                     }
-
                     System.out.println("");
                 }
             }
@@ -30,13 +28,10 @@ public class Tasks {
     public void printAll() {
         if (storageData.isFileExists()) {
             for (Map.Entry<String, Map<String, String>> entry : storageData.getDataStorage().entrySet()) {
-
                 for (Map.Entry<String, String> entry1 : entry.getValue().entrySet()) {
                     if (!entry1.getValue().isEmpty())
-
-                        System.out.println(changeText(entry1.getKey()) + ", " + entry1.getValue());
+                        System.out.println(changeText(entry1.getKey()) + ": " + entry1.getValue());
                 }
-
                 System.out.println("");
             }
         }
@@ -53,16 +48,14 @@ public class Tasks {
             element.put("Deadline", deadline);
             element.put("Status", status);
             element.put("Complete", complete);
-            storageData.getDataStorage().put(id, element);
 
-            storageData.addData(id);
+            storageData.addData(id, element);
         }
     }
 
     public void edit(String id, String nameParametr, String data) {
         if (storageData.getListId().contains(id)) {
-            storageData.getDataStorage().get(id).put(nameParametr, data);
-            storageData.dataReplacement();
+            storageData.dataReplacement(id, nameParametr, data);
         } else {
             System.out.println("Задачи с таким id не существует");
         }
@@ -100,8 +93,4 @@ public class Tasks {
             return "Дата когда задача была выполнена";
         return text;
     }
-
-
-
-
 }

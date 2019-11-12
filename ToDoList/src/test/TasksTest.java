@@ -43,11 +43,9 @@ public class TasksTest {
     public void hasId() {
 
         Tasks tasks = new Tasks(fileName);
-        if (tasks.hasId("5")) {
-            System.out.println("Имеет");
-        } else {
-            System.out.println("Не имеет");
-        }
+
+        assertTrue(tasks.hasId("5"));
+        assertFalse(tasks.hasId("40"));
 
     }
 }
