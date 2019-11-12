@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ToDoList>
   
   
@@ -11,13 +11,6 @@
   </Task>
   
 
-<Task caption="adasd" id="7">
-<Description>sadasd</Description>
-<Priority>sad</Priority>
-<Deadline>asd</Deadline>
-<Status>new</Status>
-<Complete/>
-</Task>
 <Task caption="adasd" id="8">
 <Description>sadasd</Description>
 <Priority>sad</Priority>
