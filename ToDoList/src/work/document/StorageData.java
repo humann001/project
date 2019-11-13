@@ -70,7 +70,6 @@ public class StorageData {
     private void dataParsing() {
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-
             Document document = documentBuilder.parse(nameFile);
             this.document = document;
 
@@ -80,29 +79,8 @@ public class StorageData {
             NodeList tasks = root.getChildNodes();
             this.tasks = tasks;
 
-            for (int i = 0; i < tasks.getLength(); i++) {
+            filling(tasks);
 
-                Node task = tasks.item(i);
-
-                if (task.getNodeType() != Node.TEXT_NODE && hasAttributes(task, "id") && hasAttributes(task, "caption")) {
-
-                    String taskId = task.getAttributes().getNamedItem("id").getNodeValue();
-                    Map<String, String>  elementStorage = new LinkedHashMap<>();
-                    elementStorage.put(task.getAttributes().getNamedItem("caption").getNodeName(), task.getAttributes().getNamedItem("caption").getNodeValue());
-                    dataStorage.put(taskId, elementStorage);
-
-                    NodeList taskProps = task.getChildNodes();
-
-                    listId.add(taskId);
-
-                    for (int j = 0; j < taskProps.getLength(); j++) {
-                        Node taskProb = taskProps.item(j);
-                        if (taskProb.getNodeType() != Node.TEXT_NODE) {
-                            dataStorage.get(taskId).put(taskProb.getNodeName(), taskProb.getTextContent());
-                        }
-                    }
-                }
-            }
         } catch (ParserConfigurationException ex) {
             ex.printStackTrace(System.out);
         } catch (SAXException ex) {
@@ -110,7 +88,28 @@ public class StorageData {
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
         }
+    }
 
+    private void filling(NodeList tasks) {
+        for (int i = 0; i < tasks.getLength(); i++) {
+            Node task = tasks.item(i);
+            if (task.getNodeType() != Node.TEXT_NODE && hasAttributes(task, "id") && hasAttributes(task, "caption")) {
+
+                String taskId = task.getAttributes().getNamedItem("id").getNodeValue();
+                Map<String, String>  elementStorage = new LinkedHashMap<>();
+                elementStorage.put(task.getAttributes().getNamedItem("caption").getNodeName(), task.getAttributes().getNamedItem("caption").getNodeValue());
+                dataStorage.put(taskId, elementStorage);
+                listId.add(taskId);
+
+                NodeList taskProps = task.getChildNodes();
+                for (int j = 0; j < taskProps.getLength(); j++) {
+                    Node taskProb = taskProps.item(j);
+                    if (taskProb.getNodeType() != Node.TEXT_NODE) {
+                        dataStorage.get(taskId).put(taskProb.getNodeName(), taskProb.getTextContent());
+                    }
+                }
+            }
+        }
     }
 
 

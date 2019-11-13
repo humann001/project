@@ -41,7 +41,13 @@ public class StorageDataTest {
         StorageData storageData1 = new StorageData(fileName);
 
 
-        storageData.dataReplacement("5", "Status", "new");
+        if (storageData.getDataStorage().get("5").get("Status").equals("new")) {
+            storageData.dataReplacement("5", "Status", "done");
+        } else {
+            storageData.dataReplacement("5", "Status", "new");
+        }
+
+
 
         assertFalse(storageData.getDataStorage().equals(storageData1.getDataStorage()));
 

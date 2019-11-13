@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ToDoList>
   
   
@@ -11,6 +11,13 @@
   </Task>
   
 
+<Task caption="adasd" id="7">
+<Description>sadasd</Description>
+<Priority>sad</Priority>
+<Deadline>asd</Deadline>
+<Status>new</Status>
+<Complete/>
+</Task>
 <Task caption="adasd" id="8">
 <Description>sadasd</Description>
 <Priority>sad</Priority>
@@ -43,15 +50,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <Task id="2">
 <Complete>asdad</Complete>
 </Task>
@@ -65,6 +63,32 @@
 <Status>new</Status>
 <Complete>2020</Complete>
 </Task>
+
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+<Task id="2">
+<Complete>asdad</Complete>
+</Task>
+
 <Task caption="Заголовок" id="4">
 <Description>Описание</Description>
 <Priority>33</Priority>
