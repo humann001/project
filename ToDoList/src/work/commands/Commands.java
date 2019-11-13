@@ -118,45 +118,25 @@ public class Commands {
             String id = sc.nextLine();
 
             if (tasks.hasId(id)) {
-
-                System.out.println("Хотите редактировать заголовок? Если да - введите 1, иначе - 0");
-
-                if (sc.nextLine().equals("1")) {
-                    System.out.println("Введите заголовок: ");
-                    String caption = sc.nextLine();
-                    tasks.edit(id, "caption", caption);
-                }
-
-                System.out.println("Хотите редактировать описание? Если да - введите 1, иначе - 0");
-
-                if (sc.nextLine().equals("1")) {
-                    System.out.println("Введите описание: ");
-                    String description = sc.nextLine();
-                    tasks.edit(id, "Description", description);
-                }
-
-                System.out.println("Хотите редактировать важность? Если да - введите 1, иначе - 0");
-
-                if (sc.nextLine().equals("1")) {
-                    System.out.println("Введите важность: ");
-                    String priority = sc.nextLine();
-                    tasks.edit(id, "Priority", priority);
-                }
-
-                System.out.println("Хотите редактировать срок? Если да - введите 1, иначе - 0");
-
-                if (sc.nextLine().equals("1")) {
-                    System.out.println("Введите срок: ");
-                    String deadline = sc.nextLine();
-                    tasks.edit(id, "Deadline", deadline);
-                }
-
+                inputDataEdit(sc, "Введите заголовок: ", id, "caption");
+                inputDataEdit(sc, "Введите описание: ", id, "Description");
+                inputDataEdit(sc, "Введите важность: ", id, "Priority");
+                inputDataEdit(sc, "Введите срок: ", id, "Deadline");
                 System.out.println("Успешное редактирование");
             } else {
                 System.out.println("Задачи с таким id не существует");
             }
 
             commandExists = true;
+        }
+    }
+
+    private void inputDataEdit(Scanner sc, String nameInput, String id, String nameParametr) {
+        System.out.println("Хотите редактировать " + nameInput + "? Если да - введите 1, иначе - 0");
+        if (sc.nextLine().equals("1")) {
+            System.out.println(nameInput);
+            String data = sc.nextLine();
+            tasks.edit(id, nameParametr, data);
         }
     }
 

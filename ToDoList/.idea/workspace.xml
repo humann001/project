@@ -81,21 +81,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StorageDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToDoList" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.StorageDataTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StorageDataTest.addData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ToDoList" />
       <extension name="coverage">
@@ -112,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StorageDataTest.dataReplacement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StorageDataTest.getFreeId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ToDoList" />
       <extension name="coverage">
         <pattern>
@@ -122,13 +107,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.StorageDataTest" />
-      <option name="METHOD_NAME" value="dataReplacement" />
+      <option name="METHOD_NAME" value="getFreeId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TasksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StorageDataTest.removeData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToDoList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StorageDataTest" />
+      <option name="METHOD_NAME" value="removeData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TasksTest.printAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ToDoList" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +139,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TasksTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="printAll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,20 +156,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Unnamed" />
-      <item itemvalue="JUnit.StorageDataTest" />
-      <item itemvalue="JUnit.StorageDataTest.dataReplacement" />
-      <item itemvalue="JUnit.TasksTest" />
       <item itemvalue="JUnit.StorageDataTest.addData" />
+      <item itemvalue="JUnit.TasksTest.printAll" />
+      <item itemvalue="JUnit.StorageDataTest.removeData" />
+      <item itemvalue="JUnit.StorageDataTest.getFreeId" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TasksTest" />
-        <item itemvalue="JUnit.StorageDataTest" />
+        <item itemvalue="JUnit.StorageDataTest.getFreeId" />
+        <item itemvalue="JUnit.StorageDataTest.removeData" />
         <item itemvalue="JUnit.StorageDataTest.addData" />
-        <item itemvalue="JUnit.StorageDataTest.dataReplacement" />
+        <item itemvalue="JUnit.TasksTest.printAll" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +190,7 @@
       <workItem from="1573492230327" duration="12507000" />
       <workItem from="1573578098843" duration="16721000" />
       <workItem from="1573663454534" duration="5339000" />
+      <workItem from="1573673200333" duration="5548000" />
     </task>
     <servers />
   </component>

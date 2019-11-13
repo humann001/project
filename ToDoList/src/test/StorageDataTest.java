@@ -31,7 +31,9 @@ public class StorageDataTest {
     @Test
     public void getFreeId() {
         StorageData storageData = new StorageData(fileName2);
-        assertTrue(storageData.getFreeId().equals("1"));
+
+        if (!storageData.getListId().contains("1"))
+            assertTrue(storageData.getFreeId().equals("1"));
         assertFalse(storageData.getFreeId().equals("12"));
     }
 
@@ -59,17 +61,22 @@ public class StorageDataTest {
         StorageData storageData1 = new StorageData(fileName);
 
         Map<String, String> element = new LinkedHashMap<>();
+        element.put("caption", "asdad222222");
+        element.put("fdff", "asdad111111");
         element.put("Complete", "asdad");
-        storageData.addData("2", element);
+        if (!storageData.getListId().contains("2")) {
+            storageData.addData("2", element);
+            assertFalse(storageData.getDataStorage().equals(storageData1.getDataStorage()));
+        }
 
-        assertFalse(storageData.getDataStorage().equals(storageData1.getDataStorage()));
+
     }
 
     @Test
     public void removeData() {
         StorageData storageData = new StorageData(fileName);
 
-        storageData.removeData("6");
+        storageData.removeData("2");
 
         assertFalse(storageData.getListId().contains("6"));
     }
