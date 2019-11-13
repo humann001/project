@@ -32,6 +32,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,7 +70,7 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="ToDoList1" />
+      <module name="ToDoList" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -81,7 +82,7 @@
       </method>
     </configuration>
     <configuration name="StorageDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToDoList1" />
+      <module name="ToDoList" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -95,8 +96,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StorageDataTest.addData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToDoList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StorageDataTest" />
+      <option name="METHOD_NAME" value="addData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StorageDataTest.dataReplacement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToDoList1" />
+      <module name="ToDoList" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -112,7 +129,7 @@
       </method>
     </configuration>
     <configuration name="TasksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToDoList1" />
+      <module name="ToDoList" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -126,24 +143,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TasksTest.edit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ToDoList1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TasksTest" />
-      <option name="METHOD_NAME" value="edit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="ToDoList1" />
+      <module name="ToDoList" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
@@ -153,19 +154,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Unnamed" />
       <item itemvalue="JUnit.StorageDataTest" />
       <item itemvalue="JUnit.StorageDataTest.dataReplacement" />
-      <item itemvalue="JUnit.TasksTest.edit" />
       <item itemvalue="JUnit.TasksTest" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.StorageDataTest.addData" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TasksTest" />
         <item itemvalue="JUnit.StorageDataTest" />
-        <item itemvalue="JUnit.TasksTest.edit" />
+        <item itemvalue="JUnit.StorageDataTest.addData" />
         <item itemvalue="JUnit.StorageDataTest.dataReplacement" />
       </list>
     </recent_temporary>
@@ -186,6 +187,7 @@
       <workItem from="1573370426189" duration="42631000" />
       <workItem from="1573492230327" duration="12507000" />
       <workItem from="1573578098843" duration="16721000" />
+      <workItem from="1573663454534" duration="5339000" />
     </task>
     <servers />
   </component>
