@@ -118,10 +118,10 @@ public class Commands {
             String id = sc.nextLine();
 
             if (tasks.hasId(id)) {
-                inputDataEdit(sc, "Введите заголовок: ", id, "caption");
-                inputDataEdit(sc, "Введите описание: ", id, "Description");
-                inputDataEdit(sc, "Введите важность: ", id, "Priority");
-                inputDataEdit(sc, "Введите срок: ", id, "Deadline");
+                inputDataEdit(sc, "заголовок", id, "caption");
+                inputDataEdit(sc, "описание", id, "Description");
+                inputDataEdit(sc, "важность", id, "Priority");
+                inputDataEdit(sc, "срок", id, "Deadline");
                 System.out.println("Успешное редактирование");
             } else {
                 System.out.println("Задачи с таким id не существует");
@@ -134,7 +134,7 @@ public class Commands {
     private void inputDataEdit(Scanner sc, String nameInput, String id, String nameParametr) {
         System.out.println("Хотите редактировать " + nameInput + "? Если да - введите 1, иначе - 0");
         if (sc.nextLine().equals("1")) {
-            System.out.println(nameInput);
+            System.out.println("Введите " + nameInput + ": ");
             String data = sc.nextLine();
             tasks.edit(id, nameParametr, data);
         }

@@ -156,12 +156,12 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Unnamed" />
       <item itemvalue="JUnit.StorageDataTest.addData" />
       <item itemvalue="JUnit.TasksTest.printAll" />
       <item itemvalue="JUnit.StorageDataTest.removeData" />
       <item itemvalue="JUnit.StorageDataTest.getFreeId" />
-      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
@@ -190,7 +190,8 @@
       <workItem from="1573492230327" duration="12507000" />
       <workItem from="1573578098843" duration="16721000" />
       <workItem from="1573663454534" duration="5339000" />
-      <workItem from="1573673200333" duration="5548000" />
+      <workItem from="1573673200333" duration="7852000" />
+      <workItem from="1573709330535" duration="998000" />
     </task>
     <servers />
   </component>

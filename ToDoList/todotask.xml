@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ToDoList>
-  <Task caption="Chapter1" id="1">
+  <Task caption="Caption" id="1">
     <Description>adaff</Description>
-    <Priority>100</Priority>
+    <Priority>6</Priority>
     <Deadline>2017-02-12</Deadline>
     <Status>done</Status>
-    <Complete>2017-02-19</Complete>
+    <Complete>2019-11-14</Complete>
   </Task>
   
   <Task caption="Caption12" id="5">
@@ -15,8 +15,8 @@
     <Status>new</Status>
     <Complete>2017-02-19</Complete>
   </Task>
-  <Task caption="Chapter4" id="4">
-    <Description>adaff</Description>
+  <Task caption="Caption4" id="4">
+    <Description>Des4</Description>
     <Priority>100</Priority>
     <Deadline>2017-02-12</Deadline>
     <Status>new</Status>
@@ -26,4 +26,11 @@
 
 
 
+<Task caption="New caption" id="2">
+<Description>des</Description>
+<Priority>15</Priority>
+<Deadline>2019-12-12</Deadline>
+<Status>new</Status>
+<Complete/>
+</Task>
 </ToDoList>
